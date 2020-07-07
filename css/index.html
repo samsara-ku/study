@@ -7,41 +7,55 @@
     <title>Drilling CSS</title>
 </head>
 <body>
-    <div class="box1 box">
-        <p class="p0">Hi!</p>
-        <p class="p1">This is practice of css</p>
-        <section>
-            <span class="span1">I don't know much about to css, so I make this file to practice css</span>
-        </section>
-        <p class="p1">So if you're like me, please see this file carefully</p>
-        <span class="span1">Please<br />remind this</span>
-    </div>
 
-    <p>This is control group of p tag</p>
-
-    <p>This is active group of p tag</p>
-
+    <div class="box0">Test of ".box0" selector is this. Hover me!</div>
+    <hr>
+    <div class="box0 box1">Test of ".box0.box1" selector is this. Hover me!</div>
+    <hr>
+    <p class="p0">Test of "p.p0" selector is this. Hover me!</p>
+    <hr>
     <div class="box2">
+        <p class="p1">Test of ".box2 .p1" selector is this. Hover me!</p>
+    </div>
+    <hr>
+    <div class="box3">
+        <span>Test of ".box3 > span" selector is this. Hover me!</span>
+        <br />
+        <br />
+        <span>This is also same with above inspite of blocking "br" tag. Hover me!</span>
+    </div>
+    <section>This area is section area for test "div + section" selector. Hover me!</section>
+    <section>This area is also section area but not selected by "div + section" selector. Please check css file!</section>
+    <hr>
+
+    <div class="box4">This area is div which class is "box4"! Check this.</div>
+    <p>Test of ".box4 ~ span" selector is this. Hover me!</p>
+    <p>Unlike "+" selectors, this tag is also selected by same one above</p>
+    <hr>
+    <p>Also this one, although there is one horizon-line there.</p>
+    <hr>
+
+    <div class="box5">
+        This area is div area which class is "box5".
+        Generally, all "a" tags of this area has no underline when it is hovered. Check out! <br />
         <a href="#value to test">This is test for specific fucntion of css</a><br />
         <a href="#value-en-to-test">Using attribute function.</a><br />
         <a href="#blank-and-hollow #value">This is test for specific fucntion of css</a><br />
         <a href="#blank">Also, this is test for specific fucntion of css</a>
     </div>
-
-    <p>This is control group of p tag</p>
-
-    <div id="box3">
-        <br />
-        blank!
-        <br />
-    </div>
-
+    <hr>
+    <div id="box6">This is area for testing "::before and ::after". Hover me!</div>
+    <hr>
     <ul id="list">
-        <li>Hi</li>
-        <li>This is</li>
-        <li>List</li>
-        <li>bro</li>
+        This area is used for selector like kind of "n-th~" or "first-child"
+        <li>First one</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>Last one</li>
     </ul>
+    <hr>
 
     <section id="sect1">
         <div>paragraph is here!</div> <br />
