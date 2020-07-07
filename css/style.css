@@ -1,0 +1,123 @@
+body {
+    border: 3px solid black;
+}
+
+.box1 {
+    /* ".box1" mean select all elements that class value has box1 */
+    background-color: red;
+}
+
+.box1.box {
+    /* ".box1.box" mean select all elements that class value has box1 and box2 */
+    margin: 5px;
+    border: 3px solid black;
+}
+
+p.p0 {
+    /* "p.p0" mean select all <p> elements tha class value is "p0" */
+    font-size: 30px !important;
+    color: black !important;
+}
+
+p, span {
+    /* p, span mean select all <p> and <span> elements */
+    color: darkgray;
+}
+
+.box1 .p1 {
+    /* ".box1 .p0" mean select all p0 class elements inside <div> elements */
+    border: 5px dashed blue;
+}
+
+.box1 > span {
+    /* ".box1 > span" mean select all <span> tag that parent is element that class value is box1 */
+    /* You should look carefully both, upper one and this one. */
+    /* Because upper one focuses on "inside" element, not parent. But this one focuses on parent. */
+    font-size: 10px;
+}
+
+div + p {
+     /* "div + p" mean select all <p> tags that are placed immediately after <div> tags */
+     /* You must know that "IMMEDIATELY" means there is no elements between them */
+    color: black;
+    font-size: 25px;
+}
+
+div ~ p {
+    /* "div ~ p" mean select all <p> elements which is preceded by a <div> element */
+    /* You can look difference between upper one and this one */
+    /* This selector doesn't focus on "IMMEDIATELY". */
+    /* The only important thing is the matter of place of <p> element is after of <div> element */
+    border: 5px solid teal;
+}
+
+[href] {
+    /* "[href]" mean select all elements which have attribute "href" */
+    text-decoration: none;
+}
+
+[href="#value to test"] {
+    /* "href=#value to test" mean select all elements with "href" attribute and its value should be "#value to test" */
+    font-size: 20px;
+}
+
+[href~="#value"] {
+    /* "href~=#value" mean select all elements with "href" attribute and its value should contain "#value" */
+    /* #value should be "INDEPENDENT" word. NOT A SUBSTRING */
+    background-color: tomato;
+}
+
+[href|="#blank"] {
+    /* "href|=#blank" mean select all elements with "href" attribute and its value should be "#blank" or started with "#blank-"*/
+    margin-left: 30px;
+}
+
+[href^="#value-"] {
+    /* "href^=#value-" mean select all elements with "href" attribute and its value should be started with "#value-"*/
+    color: red;
+}
+
+[href$="#value"] {
+    /* "href$=#value" mean select all elements with "href" attribute and its value ends with "#value"*/
+    font-size: 30px;
+}
+
+a:active {
+    /* "a:active" mean select all element which state is "active" */
+    /* "active" status mean the time between click something and drop that. */
+    font-size: 5px;
+}
+
+a::after {
+    /* "a::after" mean make and select virtual element which is right after of a */
+    content: 'This is a::after';
+    width: 20px;
+    height: 20px;
+    color: white;
+    background-color: red;
+}
+
+#box3::before {
+    /* "#box3::after" mean make and select virtual element which is before of element which id is box3*/
+    content: "This is .box3::before";
+    width: 20px;
+    height: 20px;
+    background-color: whitesmoke;
+}
+
+input:checked {
+    /* "input:checked" mean select all <input> elements that has attribute "checked" */
+    width: 30px;
+    height: 30px;
+}
+
+input:disabled {
+    /* "input:disabled" mean select all <input> elements that has attribute "disabled" */
+    width: 30px;
+    height: 10px;
+}
+
+input:empty {
+    /* "input:empty" mean select all <input> elements that there are no input  */
+    background-color: red;
+}
