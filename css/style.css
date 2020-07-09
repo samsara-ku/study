@@ -236,6 +236,7 @@ input:required {
 }
 
 #box7::selection {
+    /* "::selection" mean select specific area, which is dragged by mouse */
     background-color: red;
 }
 
@@ -247,6 +248,8 @@ input:required {
 }
 
 .box8 p:only-child:hover::after {
+    /* "p:only-child" mean select <p> elements which is solely in its parent */
+    /* If there is any other element there with <p> element, this cannot work */
     margin-left: 20px;
     content: "only-child is here!";
     font-size: 20px;
@@ -254,5 +257,9 @@ input:required {
 }
 
 .box8 div:only-of-type:hover {
+    /* "p:only-of-type" mean select <div> elements which is solely in its parent */
+    /* Although any other elements there with <div> element, we are never mind */
+    /* The important thing is same type of <div> element should be never there */
+    /* If not, this cannot work. */
     background-color: rosybrown;
 }
