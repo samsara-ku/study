@@ -103,9 +103,23 @@ div + section:hover {
 }
 
 a:active {
-    /* "a:active" mean select all element which state is "active" */
+    /* "a:active" mean select all elements which state is "active" */
     /* "active" status mean the time between click something and drop that. */
     font-size: 5px;
+}
+
+a:link:hover::after {
+    /* "a:link" mean select all elements which are not visited */
+    margin-left: 20px;
+    content: "I'm not visited!!";
+    color: white;
+}
+
+a:visited:hover::after {
+    /* "a:visited" mean select all elements which are visited */
+    margin-left: 20px;
+    content: "I'm visited!!";
+    color: white;
 }
 
 #box6 {
@@ -145,6 +159,20 @@ a:active {
     content: "Selector is 'li:first-child!' Check details in comments of CSS file!!!!";
 }
 
+#list p:first-child:hover::after {
+    /* Practice for :first-child */
+    color: red;
+    margin-left: 20px;
+    content: "Selector is 'p:first-child!' Check details in comments of CSS file!!!!";
+}
+
+#list p:first-of-type:hover::after {
+    /* "p:first-of-type" selector mean select <p> element which is most closely element from parent element */
+    color: red;
+    margin-left: 20px;
+    content: "Selector is 'p:first-of-type!' Check details in comments of CSS file!!!!";
+}
+
 #list li:last-child:hover::after {
     /* "li:last-child" selector mean select <li> element which should be last element in its parent*/
     /* You MUST know that if the html structure like this,
@@ -158,6 +186,19 @@ a:active {
     */
     margin-left: 20px;
     content: "Selector is 'li:last-child!' Check details in comments of CSS file!!!!";
+}
+
+#list p:last-child:hover::after {
+    /* Practice for :last-child */
+    margin-left: 20px;
+    content: "Selector is 'p:last-child!' Check details in comments of CSS file!!!!";
+}
+
+#list p:last-of-type:hover::after {
+    /* "p:last-of-type" selector mean select <p> element which is mostly far from parent element */
+    color: red;
+    margin-left: 20px;
+    content: "Selector is 'p:last-of-type!' Check details in comments of CSS file!!!!";
 }
 
 input:checked {
@@ -175,4 +216,43 @@ input:disabled {
 input:empty {
     /* "input:empty" mean select all <input> elements that there are no input  */
     background-color: red;
+}
+
+input::placeholder {
+    /* "input:empty" mean select all <input> elements that there are no input  */
+    background-color: blue;
+}
+
+input:required {
+    /* "input:required" mean select all <input> elements that there has attribute "required"  */
+    width: 50px;
+    height: 50px;
+}
+
+#box7 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#box7::selection {
+    background-color: red;
+}
+
+.box8 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box8 p:only-child:hover::after {
+    margin-left: 20px;
+    content: "only-child is here!";
+    font-size: 20px;
+    color: red;
+}
+
+.box8 div:only-of-type:hover {
+    background-color: rosybrown;
 }

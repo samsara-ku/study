@@ -49,19 +49,41 @@
     <ul id="list">
         This area is used for selector like kind of "n-th~" or "first-child"
         <li>First one</li>
+        <p>Not selecting by using p:first-child</p>
         <li>2</li>
         <li>3</li>
         <li>4</li>
         <li>5</li>
+        <p>Not selecting by using p:last-child</p>
         <li>Last one</li>
     </ul>
     <hr>
 
     <section id="sect1">
         <div>paragraph is here!</div> <br />
-        <input type="text"> bla bla <br />
-        <input type="checkbox" disabled>And checkbox is also here! <br />
-        <input type="checkbox" checked>Another check box! <br />
+        <input type="text">This text input is test for ":empty" selector!<br />
+        <input type="text" placeholder="Hi! This area is for placeholder!">This text input is test for ":placeholder" selector!<br />
+        <input type="checkbox" disabled>This checkbox is test for ":disabled" selector! You cannot check this checkbox!<br />
+        <input type="checkbox" checked>This checkbox is test for ":checked" selector! You can see this box is checked in default!<br />
+        <input type="radio" required>This checkbox is test for ":required" selector! You cannot submit some form without completing this value!<br />
     </section>
+    <hr>
+
+    <div id="box7">
+        This text is test for "::selection" option. Please drag this text. You can see the draged text background color is changed to red!
+    </div>
+    <hr>
+
+    <div class="box8">
+        <p>This "p" element is selected by using ":only-child"</p>
+    </div>
+    <hr>
+
+    <div class="box8">
+        <p>This "p" element is not selected by using ":only-child"</p>
+        <br />
+        <div>This "div" element is selected by using "div:only-of-type", not by "div:only-child"</div>
+    </div>
+
 </body>
 </html>
