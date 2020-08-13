@@ -1,0 +1,98 @@
+/* 
+In SASS
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+  
+  .chk {
+    $height: 2rem;
+    $width: $height * 2.4;
+    $margin: .125rem;
+    $margin2x: $margin * 2;
+    $size: $height - $margin2x;
+  
+    input[type="checkbox"] {
+      display: none;
+      
+      &:checked + label {
+        &::after {
+          background-color: #cf243a;
+          background-image: url('https://fonts.gstatic.com/s/i/materialicons/close/v8/24px.svg?download=true');
+          transform: translateX($width - $size - $margin2x) rotateZ(180deg);
+        }
+      }
+    }
+    
+    label {
+      position: relative;
+      display: inline-block;
+      margin: .5rem;
+      width: $width;
+      height: $height;
+      background-color: #12459a;
+      border-radius: $width;
+      box-sizing: border-box;
+      cursor: pointer;
+      
+      &::after {
+        position: absolute;
+        top: $margin;
+        left: $margin;
+        width: $size;
+        height: $size;
+        background-color: #24cf9a;
+        background-image: url('https://fonts.gstatic.com/s/i/materialicons/done/v9/24px.svg?download=true');
+        background-repeat: no-repeat;
+        background-size: $size * .875 auto;
+        background-position: center;
+        border-radius: 50%;
+        content: '';
+        transition: transform .25s ease-in-out, background-color .25s ease-in-out;
+      }
+    }
+  } */
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+  }
+  
+  .chk input[type=checkbox] {
+    display: none;
+  }
+  .chk input[type=checkbox]:checked + label::after {
+    background-color: #cf243a;
+    background-image: url("https://fonts.gstatic.com/s/i/materialicons/close/v8/24px.svg?download=true");
+    transform: translateX(2.8rem) rotateZ(180deg);
+  }
+  .chk label {
+    position: relative;
+    display: inline-block;
+    margin: 0.5rem;
+    width: 4.8rem;
+    height: 2rem;
+    background-color: #12459a;
+    border-radius: 4.8rem;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+  .chk label::after {
+    position: absolute;
+    top: 0.125rem;
+    left: 0.125rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    background-color: #24cf9a;
+    background-image: url("https://fonts.gstatic.com/s/i/materialicons/done/v9/24px.svg?download=true");
+    background-repeat: no-repeat;
+    background-size: 1.53125rem auto;
+    background-position: center;
+    border-radius: 50%;
+    content: "";
+    transition: transform 0.25s ease-in-out, background-color 0.25s ease-in-out;
+  }
+  
