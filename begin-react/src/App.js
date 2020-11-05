@@ -7,6 +7,7 @@ function App() {
   return (
     <div>
       <Hello name="react" color="red" />
+      <Hello color="pink" />
     </div>
   )
 }
