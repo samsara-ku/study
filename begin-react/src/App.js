@@ -2,13 +2,14 @@ import React from 'react'
 import Hello from './Hello'
 import logo from './logo.svg'
 import './App.css'
+import Wrapper from './Wrapper'
 
 function App() {
   return (
-    <div>
+    <Wrapper>
       <Hello name="react" color="red" />
       <Hello color="pink" />
-    </div>
+    </Wrapper>
   )
 }
 
