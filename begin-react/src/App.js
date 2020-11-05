@@ -3,14 +3,10 @@ import Hello from './Hello'
 import logo from './logo.svg'
 import './App.css'
 import Wrapper from './Wrapper'
+import Counter from './Counter'
 
 function App() {
-  return (
-    <Wrapper>
-      <Hello name="react" color="red" />
-      <Hello color="pink" />
-    </Wrapper>
-  )
+  return <Counter />
 }
 
 export default App
